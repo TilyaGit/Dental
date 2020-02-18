@@ -1,0 +1,25 @@
+﻿<Window x:Class="Dental.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dental.WPF"
+        mc:Ignorable="d" 
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:MainModelView/>
+    </Window.DataContext>
+    <Grid>
+        <Menu>
+            <MenuItem Header="Поиск">
+                <MenuItem Header="Пациент" Click="MenuItem_Click" > 
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        <StackPanel>
+            <TextBox Name="PatientSearch" Text="{Binding PatientSearch}"></TextBox>
+        </StackPanel>
+
+    </Grid>
+</Window>
